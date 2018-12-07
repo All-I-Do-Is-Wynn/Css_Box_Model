@@ -1,0 +1,96 @@
+/*  CSS Box Model
+Padding - space between border and content
+Border - outline of content
+Margin - space between border and outside of the border
+*/
+
+* {
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/* 
+   "box-sizing: border-box;" will add the padding and border to
+   the width of the box. So now, "width:500px;" will include padding
+   and border. And now we dont need calc.
+   
+   There is no "margin-sizing" so if we add a margin, we must use 
+   width: calc(width - margin);
+*/
+
+h1{
+    width: 500px;
+    background: grey;
+    color: blueviolet;
+    text-align: center;
+    padding: 20px;
+    border: 15px solid red;
+    margin: 20px 20px; 
+}
+/* 
+Total Width of box = width+padding+border+margin
+For h1: Width = 500+20+20+15+15+20+20 = 610px 
+*/
+
+div.boxes{
+    background: lightblue;
+    padding: 20px;
+}
+
+
+.box{
+    float: left;
+    width: 33.33333%;  
+    padding: 20px;
+    border: 10px solid lightgrey;
+}
+/*
+  Try to use 5 decimal places if necessary.
+  We expect 3 boxes at this width to take up one div of the page, but dont
+  forget that we have to add the padding and border.
+  To fix this we use calc to subtract the padding and border.
+
+.box{
+    float: left;
+    width: calc(33.33333% - 40px - 20px);  
+    padding: 20px;
+    border: 10px solid lightgrey;
+}
+*/
+
+/*When using "float" we must use a clear fix*/
+/*ClearFix*/
+.boxes::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2{
+    color: lightgrey;
+    text-align: center;
+}
+
+.box1{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
