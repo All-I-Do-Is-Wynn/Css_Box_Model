@@ -75,14 +75,17 @@ h2{
 
 .box1{
     background: lightblue;
+    background-color: lightblue;
 }
 
 .box2{
     background: lightcoral;
+    background-color: lightcoral;
 }
 
 .box3{
     background: lightgreen;
+    background-color: lightgreen;
 }
 
 
